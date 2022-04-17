@@ -13,7 +13,7 @@ namespace ProsaKodeArkadePåske
 {
     public partial class Form1 : Form
     {
-        public static Color[] colors = {Color.Red, Color.Green, Color.Blue,Color.Yellow, Color.Black, Color.White};
+        public static Color[] colors = {Color.White, Color.Red, Color.Green, Color.Blue,Color.Yellow, Color.Black};
 
         private Bitmap eggBase;
         private Bitmap[] eggMid;
