@@ -32,10 +32,13 @@
             this.pictureBoxEggBot = new System.Windows.Forms.PictureBox();
             this.pictureBoxEggMid = new System.Windows.Forms.PictureBox();
             this.pictureBoxEggTop = new System.Windows.Forms.PictureBox();
-            this.buttonEggBot = new System.Windows.Forms.Button();
-            this.buttonEggMid = new System.Windows.Forms.Button();
-            this.buttonEggTop = new System.Windows.Forms.Button();
+            this.buttonEggBotPattern = new System.Windows.Forms.Button();
+            this.buttonEggMidPattern = new System.Windows.Forms.Button();
+            this.buttonEggTopPattern = new System.Windows.Forms.Button();
             this.buttonEggBase = new System.Windows.Forms.Button();
+            this.buttonEggTopColor = new System.Windows.Forms.Button();
+            this.buttonEggMidColor = new System.Windows.Forms.Button();
+            this.buttonEggBotColor = new System.Windows.Forms.Button();
             this.panelEgg.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEggBot)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEggMid)).BeginInit();
@@ -50,7 +53,7 @@
             this.panelEgg.Controls.Add(this.pictureBoxEggTop);
             this.panelEgg.Location = new System.Drawing.Point(31, 12);
             this.panelEgg.Name = "panelEgg";
-            this.panelEgg.Size = new System.Drawing.Size(402, 600);
+            this.panelEgg.Size = new System.Drawing.Size(400, 600);
             this.panelEgg.TabIndex = 0;
             // 
             // pictureBoxEggBot
@@ -80,32 +83,35 @@
             this.pictureBoxEggTop.TabIndex = 0;
             this.pictureBoxEggTop.TabStop = false;
             // 
-            // buttonEggBot
+            // buttonEggBotPattern
             // 
-            this.buttonEggBot.Location = new System.Drawing.Point(472, 546);
-            this.buttonEggBot.Name = "buttonEggBot";
-            this.buttonEggBot.Size = new System.Drawing.Size(75, 23);
-            this.buttonEggBot.TabIndex = 6;
-            this.buttonEggBot.Text = "Bot Pattern";
-            this.buttonEggBot.UseVisualStyleBackColor = true;
+            this.buttonEggBotPattern.Location = new System.Drawing.Point(472, 474);
+            this.buttonEggBotPattern.Name = "buttonEggBotPattern";
+            this.buttonEggBotPattern.Size = new System.Drawing.Size(75, 23);
+            this.buttonEggBotPattern.TabIndex = 6;
+            this.buttonEggBotPattern.Text = "Pattern";
+            this.buttonEggBotPattern.UseVisualStyleBackColor = true;
+            this.buttonEggBotPattern.Click += new System.EventHandler(this.buttonEggBotPattern_Click);
             // 
-            // buttonEggMid
+            // buttonEggMidPattern
             // 
-            this.buttonEggMid.Location = new System.Drawing.Point(472, 336);
-            this.buttonEggMid.Name = "buttonEggMid";
-            this.buttonEggMid.Size = new System.Drawing.Size(78, 23);
-            this.buttonEggMid.TabIndex = 5;
-            this.buttonEggMid.Text = "Mid Pattern";
-            this.buttonEggMid.UseVisualStyleBackColor = true;
+            this.buttonEggMidPattern.Location = new System.Drawing.Point(472, 281);
+            this.buttonEggMidPattern.Name = "buttonEggMidPattern";
+            this.buttonEggMidPattern.Size = new System.Drawing.Size(78, 23);
+            this.buttonEggMidPattern.TabIndex = 5;
+            this.buttonEggMidPattern.Text = "Pattern";
+            this.buttonEggMidPattern.UseVisualStyleBackColor = true;
+            this.buttonEggMidPattern.Click += new System.EventHandler(this.buttonEggMidPattern_Click);
             // 
-            // buttonEggTop
+            // buttonEggTopPattern
             // 
-            this.buttonEggTop.Location = new System.Drawing.Point(475, 127);
-            this.buttonEggTop.Name = "buttonEggTop";
-            this.buttonEggTop.Size = new System.Drawing.Size(75, 23);
-            this.buttonEggTop.TabIndex = 4;
-            this.buttonEggTop.Text = "Top Pattern";
-            this.buttonEggTop.UseVisualStyleBackColor = true;
+            this.buttonEggTopPattern.Location = new System.Drawing.Point(475, 127);
+            this.buttonEggTopPattern.Name = "buttonEggTopPattern";
+            this.buttonEggTopPattern.Size = new System.Drawing.Size(75, 23);
+            this.buttonEggTopPattern.TabIndex = 4;
+            this.buttonEggTopPattern.Text = "Pattern";
+            this.buttonEggTopPattern.UseVisualStyleBackColor = true;
+            this.buttonEggTopPattern.Click += new System.EventHandler(this.buttonEggTopPattern_Click);
             // 
             // buttonEggBase
             // 
@@ -117,16 +123,49 @@
             this.buttonEggBase.UseVisualStyleBackColor = true;
             this.buttonEggBase.Click += new System.EventHandler(this.buttonEggBase_Click);
             // 
+            // buttonEggTopColor
+            // 
+            this.buttonEggTopColor.Location = new System.Drawing.Point(477, 165);
+            this.buttonEggTopColor.Name = "buttonEggTopColor";
+            this.buttonEggTopColor.Size = new System.Drawing.Size(75, 23);
+            this.buttonEggTopColor.TabIndex = 7;
+            this.buttonEggTopColor.Text = "Color";
+            this.buttonEggTopColor.UseVisualStyleBackColor = true;
+            this.buttonEggTopColor.Click += new System.EventHandler(this.buttonEggTopColor_Click);
+            // 
+            // buttonEggMidColor
+            // 
+            this.buttonEggMidColor.Location = new System.Drawing.Point(472, 323);
+            this.buttonEggMidColor.Name = "buttonEggMidColor";
+            this.buttonEggMidColor.Size = new System.Drawing.Size(75, 23);
+            this.buttonEggMidColor.TabIndex = 8;
+            this.buttonEggMidColor.Text = "Color";
+            this.buttonEggMidColor.UseVisualStyleBackColor = true;
+            this.buttonEggMidColor.Click += new System.EventHandler(this.buttonEggMidColor_Click);
+            // 
+            // buttonEggBotColor
+            // 
+            this.buttonEggBotColor.Location = new System.Drawing.Point(472, 517);
+            this.buttonEggBotColor.Name = "buttonEggBotColor";
+            this.buttonEggBotColor.Size = new System.Drawing.Size(75, 23);
+            this.buttonEggBotColor.TabIndex = 9;
+            this.buttonEggBotColor.Text = "Color";
+            this.buttonEggBotColor.UseVisualStyleBackColor = true;
+            this.buttonEggBotColor.Click += new System.EventHandler(this.buttonEggBotColor_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(584, 621);
-            this.Controls.Add(this.buttonEggBot);
+            this.Controls.Add(this.buttonEggBotColor);
+            this.Controls.Add(this.buttonEggMidColor);
+            this.Controls.Add(this.buttonEggTopColor);
+            this.Controls.Add(this.buttonEggBotPattern);
             this.Controls.Add(this.panelEgg);
             this.Controls.Add(this.buttonEggBase);
-            this.Controls.Add(this.buttonEggTop);
-            this.Controls.Add(this.buttonEggMid);
+            this.Controls.Add(this.buttonEggTopPattern);
+            this.Controls.Add(this.buttonEggMidPattern);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -144,9 +183,12 @@
         private System.Windows.Forms.PictureBox pictureBoxEggTop;
         private System.Windows.Forms.PictureBox pictureBoxEggBot;
         private System.Windows.Forms.PictureBox pictureBoxEggMid;
-        private System.Windows.Forms.Button buttonEggBot;
-        private System.Windows.Forms.Button buttonEggMid;
-        private System.Windows.Forms.Button buttonEggTop;
+        private System.Windows.Forms.Button buttonEggBotPattern;
+        private System.Windows.Forms.Button buttonEggMidPattern;
+        private System.Windows.Forms.Button buttonEggTopPattern;
         private System.Windows.Forms.Button buttonEggBase;
+        private System.Windows.Forms.Button buttonEggTopColor;
+        private System.Windows.Forms.Button buttonEggMidColor;
+        private System.Windows.Forms.Button buttonEggBotColor;
     }
 }

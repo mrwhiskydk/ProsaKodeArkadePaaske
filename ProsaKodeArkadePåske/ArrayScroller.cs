@@ -43,5 +43,10 @@ namespace ProsaKodeArkadePåske
 
             return list[counter];
         }
+
+        public T Current()
+        {
+            return list[counter];
+        }
     }
 }
